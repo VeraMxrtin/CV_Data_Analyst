@@ -91,3 +91,8 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+
+!.github/
+!.github/workflows/
+!.github/workflows/*.yml
