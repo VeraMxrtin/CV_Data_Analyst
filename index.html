@@ -1,352 +1,467 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Analista de Datos</title>
-    <link rel="icon" type="image/png" href="./img/Blue Modern Data Economy Presentation.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#245be0">
+<title>Vera Martín · Analista de Datos Junior en Lima</title>
+<meta name="description" content="Portafolio de Vera Martín, Analista de Datos Junior en Lima, Perú. Proyectos con Python, SQL, Power BI, Excel y automatización de procesos.">
+<link rel="canonical" href="https://cvveramartin.web.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Vera Martín · Analista de Datos Junior">
+<meta property="og:description" content="De los datos a una solución. Proyectos de análisis, visualización y automatización.">
+<meta property="og:url" content="https://cvveramartin.web.app/">
+<meta property="og:image" content="https://cvveramartin.web.app/img/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="index.css">
+<script src="index.js" defer>
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Vera Martín","jobTitle":"Analista de Datos Junior","url":"https://cvveramartin.web.app/","email":"mailto:vera124486@gmail.com","sameAs":["https://github.com/VeraMxrtin","https://www.linkedin.com/in/vera-martin-40375b328/"],"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"knowsAbout":["Python","SQL","Power BI","Excel","Análisis de datos"]}</script>
 </head>
-<body class="antialiased">
-   <!-- Navigation -->
-<nav class="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <a href="#" class="flex items-center space-x-2">
-      <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xl shadow-md">
-        VM
-      </div>
-      <span class="text-xl font-bold text-gray-800">Vera Martín</span>
-    </a>
-
-    <!-- Links (desktop) -->
-    <div class="hidden md:flex justify-end flex-1">
-      <a href="#about" class="px-6 text-gray-600 hover:text-gray-900 transition">Sobre mí</a>
-      <a href="#skills" class="px-6 text-gray-600 hover:text-gray-900 transition">Habilidades</a>
-      <a href="#projects" class="px-6 text-gray-600 hover:text-gray-900 transition">Proyectos</a>
-      <a href="#experience" class="px-6 text-gray-600 hover:text-gray-900 transition">Experiencia</a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button class="md:hidden text-gray-600">
-      <i class="fas fa-bars text-xl"></i>
-    </button>
-  </div>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+<div class="container nav-bar">
+<a class="brand" href="#inicio" aria-label="Vera Martín, inicio">
+<span class="monogram">vm<span>.</span>
+</span>
+<span>Vera Martín</span>
+</a>
+<button class="menu-toggle" aria-controls="navigation" aria-expanded="false" hidden>Menú <span aria-hidden="true">☰</span>
+</button>
+<nav id="navigation" aria-label="Navegación principal">
+<a href="#projects">Proyectos</a>
+<a href="#about">Sobre mí</a>
+<a href="#skills">Habilidades</a>
+<a href="#experience">Trayectoria</a>
+<a class="nav-contact" href="#contact">Conversemos <span aria-hidden="true">↗</span>
+</a>
 </nav>
-
-
-
-<!-- Hero Section -->
-<section class="min-h-screen flex items-center ">
-    <div class="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-12 items-center">
-        <!-- Left Content -->
-        <div class="animate-fade-in" style="animation-delay: 0.1s;">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                Transformando <span class="gradient-text">datos</span> en decisiones estratégicas
-            </h1>
-            <p class="text-lg text-gray-600 mb-8">
-                Analista de datos de 22 años apasionado por descubrir insights ocultos. 
-                Uso Python, SQL y Power BI para convertir información en acción.
-            </p>
-            <div class="flex justify-start pl-4 space-x-4">
-            <!-- Botón Ver Proyectos -->
-            <a href="#projects" 
-            class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 transition inline-flex items-center shadow-md hover:shadow-lg">
-                Ver mis proyectos
-            </a>
-
-            <!-- Botón Descargar CV -->
-            <a href="./img/VeraMartín.pdf" download
-            class="px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-100 transition inline-flex items-center shadow-md hover:shadow-lg">
-                Descargar CV
-            </a>
-        </div>
-
-            
-        </div>
-
-        <!-- Right Content (code card) -->
-        <div class="animate-fade-in" style="animation-delay: 0.3s;">
-            <div class="relative">
-                <div class="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl opacity-20 blur-xl"></div>
-                <div class="relative bg-white rounded-2xl p-1 shadow-xl overflow-hidden">
-                    <div class="bg-gray-800 p-4 flex items-center">
-                        <div class="flex space-x-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <div class="ml-4 text-xs text-gray-400">data_analysis.ipynb</div>
-                    </div>
-                    <div class="p-6 bg-gray-900 text-gray-300 font-mono text-sm">
-                        <div class="mb-2"><span class="text-purple-400">import</span> pandas <span class="text-purple-400">as</span> pd</div>
-                        <div class="mb-2"><span class="text-purple-400">import</span> matplotlib.pyplot <span class="text-purple-400">as</span> plt</div>
-                        <div class="mb-4"></div>
-                        <div class="mb-2"><span class="text-blue-400"># Cargar y limpiar datos</span></div>
-                        <div class="mb-2">df = pd.read_csv(<span class="text-green-400">'datos_empresa.csv'</span>)</div>
-                        <div class="mb-2">df = df.dropna().query(<span class="text-green-400">'ventas > 0'</span>)</div>
-                        <div class="mb-4"></div>
-                        <div class="mb-2"><span class="text-blue-400"># Análisis exploratorio</span></div>
-                        <div class="mb-2">ventas_por_region = df.groupby(<span class="text-green-400">'region'</span>)[<span class="text-green-400">'ventas'</span>].sum()</div>
-                        <div class="mb-2">ventas_por_region.plot(kind=<span class="text-green-400">'bar'</span>)</div>
-                        <div class="mb-2">plt.title(<span class="text-green-400">'Ventas por región'</span>)</div>
-                        <div class="mb-2">plt.show()</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+</header>
+<main id="main">
+<section class="hero container" id="inicio" aria-labelledby="hero-title">
+<div class="hero-content">
+<p class="eyebrow">
+<span class="status-dot" aria-hidden="true">
+</span> ANÁLISIS DE DATOS · LIMA, PERÚ</p>
+<p class="hero-intro">Hola, soy Vera Martín.</p>
+<h1 id="hero-title">De los datos<br>a una <span>solución.</span>
+</h1>
+<p class="hero-role">Analista de Datos Junior</p>
+<p class="hero-description">Transformo datos en información útil mediante análisis, visualización y automatización de procesos.</p>
+<div class="hero-actions">
+<a class="button primary" href="#projects">Ver proyectos <span aria-hidden="true">↗</span>
+</a>
+<a class="button" href="img/cv_veramartin.pdf" target="_blank" rel="noopener noreferrer">Ver CV <span aria-hidden="true">↗</span><span class="sr-only"> (nueva pestaña)</span>
+</a>
+</div>
+<div class="hero-links">
+<a href="#contact">Contactarme →</a>
+<span class="divider" aria-hidden="true">
+</span>
+<a href="https://github.com/VeraMxrtin" target="_blank" rel="noopener noreferrer">GitHub ↗<span class="sr-only"> (nueva pestaña)</span>
+</a>
+<a href="https://www.linkedin.com/in/vera-martin-40375b328/" target="_blank" rel="noopener noreferrer">LinkedIn ↗<span class="sr-only"> (nueva pestaña)</span>
+</a>
+</div>
+</div>
+<div class="hero-visual">
+<div class="portrait-frame">
+<img src="img/portrait.webp" width="640" height="853" alt="Retrato de Vera Martín" fetchpriority="high">
+<div class="portrait-caption">
+<span>VERA MARTÍN</span>
+<span>Datos + iniciativa</span>
+</div>
+</div>
+<div class="process-note">
+<span class="note-icon" aria-hidden="true">↗</span>
+<div>
+<strong>Entender. Analizar. Construir.</strong>
+<span>Mi forma de abordar un problema.</span>
+</div>
+</div>
+<span class="visual-index" aria-hidden="true">PORTAFOLIO / 2026</span>
+</div>
 </section>
-
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Sobre <span class="gradient-text">mí</span></h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="md:col-span-2">
-                    <p class="text-lg text-gray-600 mb-6">Desde que descubrí el poder de los datos, me he dedicado a dominar las herramientas y técnicas que permiten extraer conocimiento valioso de la información.</p>
-                    <p class="text-lg text-gray-600 mb-6">Creo que los datos bien analizados pueden transformar negocios, optimizar procesos y mejorar la toma de decisiones. Mi enfoque combina habilidades técnicas sólidas con la capacidad de comunicar hallazgos de manera clara y persuasiva.</p>
-                    <p class="text-lg text-gray-600">Cuando no estoy analizando datasets, me gusta mantenerme al día con las últimas tendencias en ciencia de datos, participar en competencias de análisis y contribuir a proyectos open source.</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-48 h-48 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 p-1 mb-6">
-                        <div class="w-full h-full rounded-full bg-white overflow-hidden">
-                            <img src="./img/fotocv.png" alt="Profile" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-xl font-bold mb-2">Analista de Datos</h3>
-                        <p class="text-gray-500"> Vera Martín | 22 años</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Mis <span class="gradient-text">habilidades</span></h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 flex items-center">
-                        <i class="fas fa-laptop-code text-blue-500 mr-3"></i> Habilidades técnicas
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Python</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">SQL</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Power BI</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Pandas</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">NumPy</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Scikit-Learn</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Matplotlib</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Seaborn</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Excel Avanzado</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">ETL</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Google Analytics</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">D3.JS</span>
-
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 flex items-center">
-                        <i class="fas fa-brain text-purple-500 mr-3"></i> Habilidades blandas
-                    </h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Análisis crítico</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Resolución de problemas</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Comunicación de datos</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Storytelling</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Trabajo en equipo</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Gestión de proyectos</span>
-                        <span class="skill-badge px-4 py-2 bg-gray-100 rounded-full text-gray-800 font-medium transition">Pensamiento estadístico</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Mis <span class="gradient-text">proyectos</span></h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Spotify -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 overflow-hidden">
-                         <img src="./img/proyectos-spotify.jpg" alt="Vista previa del proyecto" class="w-full h-full object-cover">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Predicción de Visualizaciones en YouTube</h3>
-                        <p class="text-gray-600 mb-4">
-                            Modelo de machine learning que predice cuántas views tendrá un video de YouTube analizando las características musicales extraídas desde Spotify.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
-                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded">Pandas</span>
-                            <span class="text-xs px-2 py-1 bg-purple-100 text-purple-800 rounded">Scikit-learn</span>
-                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded">Spotify API</span>
-                            <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">YouTube Data</span>
-                            <span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-800 rounded">D3.JS</span>
-
-                        </div>
-                                <a href="https://sample-firebase-ai-app-27529.web.app/" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-medium flex items-center hover:underline">
-                                        Ver detalles <i class="fas fa-arrow-right ml-2"></i>
-                                </a>
-
-                    </div>
-
-                </div>
-                
-                   <!-- Project: Golden Predict -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="./img/goldprice.jpg" alt="Vista previa del proyecto Golden Predict" class="w-full h-full object-cover">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Predicción del Precio del Oro</h3>
-                        <p class="text-gray-600 mb-4">
-                            Sistema de Machine Learning que predice el precio del oro para 2025 y lo visualiza de forma interactiva con D3.js.
-                            Incluye análisis temporal, modelo supervisado y dashboard web con visualizaciones dinámicas.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-800 rounded">Python</span>
-                            <span class="text-xs px-2 py-1 bg-purple-100 text-purple-800 rounded">Scikit-learn</span>
-                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded">D3.JS</span>
-                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Flask</span>
-                            <span class="text-xs px-2 py-1 bg-orange-100 text-orange-800 rounded">Data Visualization</span>
-                        </div>
-                        <a href="https://veragoldprice.web.app/" target="_blank" rel="noopener noreferrer" 
-                        class="text-blue-600 font-medium flex items-center hover:underline">
-                            Ver detalles <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-              <!-- Project: Diagnóstico de Cáncer de Mama (Streamlit) -->
-                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="./img/cancer_mama.png" alt="Vista previa del proyecto Cáncer de Mama" class="w-full h-full object-cover">
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Diagnóstico de Cáncer de Mama & App</h3>
-                        <p class="text-gray-600 mb-4">
-                            Sistema de Machine Learning que predice la probabilidad de diagnóstico benigno o maligno a partir de variables clínicas.
-                            Incluye explicabilidad con SHAP y una app interactiva en Streamlit para realizar predicciones en tiempo real.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
-                            <span class="text-xs px-2 py-1 bg-purple-100 text-purple-800 rounded">Scikit-learn</span>
-                            <span class="text-xs px-2 py-1 bg-pink-100 text-pink-800 rounded">Streamlit</span>
-                            <span class="text-xs px-2 py-1 bg-red-100 text-red-800 rounded">SHAP</span>
-                            <span class="text-xs px-2 py-1 bg-yellow-100 text-red-800 rounded">D3.JS</span>
-                            <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded">Data Visualization</span>
-                        </div>
-                        <a href="https://verapredictbreastcancer.web.app/" target="_blank" rel="noopener noreferrer"
-                        class="text-blue-600 font-medium flex items-center hover:underline">
-                            Ver detalles <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Mi <span class="gradient-text">trayectoria</span></h2>
-            
-            <div class="space-y-8">
-                <!-- Experience 1 -->
-                <div class="timeline-item relative pl-16">
-                    <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                    <h3 class="text-xl font-bold">Analista de Datos Jr.</h3>
-                    <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2026</span>
-                </div>
-                <h4 class="text-gray-600 font-medium mb-4">Kaggle</h4>
-                <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                    <li>Automaticé reportes mensuales reduciendo tiempo de generación en 70%</li>
-                    <li>Implementé procesos ETL para limpieza y transformación de datos</li>
-                    <li>Utilicé datasets de Kaggle para crear modelos de machine learning enfocados en predicción</li>
-                </ul>
-        </div>
-
-                </div>
-                
-                <!-- Experience 2 -->
-                <div class="timeline-item relative pl-16">
-                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-xl font-bold">Desarrollador Web.</h3>
-                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2026</span>
-                        </div>
-                        <h4 class="text-gray-600 font-medium mb-4">Proyecto Personal & Services</h4>
-                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                            <li>Diseñé y personalicé mi tienda virtual en Shopify, con una experiencia moderna y optimizada</li>
-                            <li>Diseñé mis proyectos con un estilo único y profesional</li>                            
-                            <li>Creé la página de servicios de decoración para eventos llamada <strong>TIKKY</strong></li>
-                        </ul>
-                    </div>
-                </div>
-
-                
-                <!-- Experience 3 -->
-                 <div class="timeline-item relative pl-16">
-                    <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-                            <h3 class="text-xl font-bold">Modelador de Procesos BPMN</h3>
-                            <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">2025</span>
-                        </div>
-                        <h4 class="text-gray-600 font-medium mb-4">Simulación y Documentación</h4>
-                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                            <li>Diseñé flujos de procesos usando BPMN para mejorar eficiencia operativa</li>
-                            <li>Documenté casos de negocio en Bizagi Modeler y Bonita</li>
-                            <li>Identifiqué cuellos de botella y propuse automatizaciones</li>
-                        </ul>
-                    </div>
-                </div>
-               
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Floating Contact Button -->
-   <div class="fixed bottom-8 right-8 z-50">
-    <a href="https://wa.me/51947082837" target="_blank" 
-       class="pulse w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg flex items-center justify-center text-white text-2xl hover:shadow-xl transition-all transform hover:scale-110">
-        <i class="fas fa-envelope"></i>
-    </a>
-    </div>
-
-
-    <!-- Footer -->
-    <footer class="py-8 bg-gray-950 text-gray-400">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <p>© 2026 Vera Martín. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-<script src="index.js"></script>
-   
+<div class="stack-strip">
+<div class="container stack-inner">
+<span>MI CAJA DE HERRAMIENTAS</span>
+<ul aria-label="Tecnologías principales">
+<li>Python</li>
+<li>SQL</li>
+<li>Power BI</li>
+<li>Excel</li>
+</ul>
+</div>
+</div>
+<section id="projects" class="section container" aria-labelledby="projects-title">
+<div class="section-heading">
+<div>
+<p class="eyebrow">01 / TRABAJO SELECCIONADO</p>
+<h2 id="projects-title">Aprender construyendo.<br>
+<span>Demostrar con proyectos.</span>
+</h2>
+</div>
+<p>Del análisis a la aplicación: tres formas de explorar datos y comunicar resultados.</p>
+</div>
+<div class="project-grid">
+<article class="project-card">
+<a class="project-image spotify-image" href="https://veraspotify.web.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir aplicación Spotify-YouTube en nueva pestaña">
+<span class="project-number">PROYECTO 01</span>
+<img src="img/spotify.webp" width="960" height="667" alt="Captura real de la aplicación: formulario de características musicales y panel de resultados" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</a>
+<div class="project-body">
+<p class="project-category">MÚSICA · MODELOS PREDICTIVOS</p>
+<h3>Spotify-YouTube Predictor</h3>
+<p>Explorar cómo las características de una canción se relacionan con sus visualizaciones en YouTube.</p>
+<ul class="tags" aria-label="Tecnologías">
+<li>Python</li>
+<li>Flask</li>
+<li>NumPy</li>
+<li>D3.js</li>
+</ul>
+<p class="project-outcome">↳ API y aplicación con 10 variables de entrada.</p>
+<div class="project-actions">
+<a href="https://veraspotify.web.app/" target="_blank" rel="noopener noreferrer">Ver proyecto ↗<span class="sr-only"> (nueva pestaña)</span>
+</a>
+<a href="https://github.com/VeraMxrtin/Model-Spotify" target="_blank" rel="noopener noreferrer">GitHub ↗<span class="sr-only"> (nueva pestaña)</span>
+</a>
+</div>
+<details>
+<summary>Explorar el caso <span aria-hidden="true">+</span>
+</summary>
+<div class="case-content">
+<h4>Contexto y objetivo</h4>
+<p>Proyecto independiente para estimar vistas de videos musicales a partir de características de Spotify y presentar el resultado en una interfaz web.</p>
+<h4>Fuente y preparación de datos</h4>
+<p>La aplicación recibe 10 variables: bailabilidad, energía, valencia, volumen, discurso, acústica, instrumentalidad, tempo, duración y reproducciones. La fuente exacta del dataset y su limpieza están pendientes de documentar.</p>
+<h4>Metodología y herramientas</h4>
+<p>El código público carga un modelo serializado y expone una API de predicción con Flask y NumPy. Interfaz con visualización en D3.js. El código del modelo está disponible en GitHub.</p>
+<h4>Resultados y limitaciones</h4>
+<p>Aplicación pública con formulario y vista de resultados. No se publica una métrica de rendimiento: falta reproducir la evaluación y verificar la partición de datos. Las estimaciones no garantizan la popularidad de una canción.</p>
+<h4>Conclusión</h4>
+<p>El proyecto conecta un modelo en Python con una aplicación que permite explorar sus resultados.</p>
+</div>
+</details>
+</div>
+</article>
+<article class="project-card">
+<a class="project-image gold-image" href="https://veragoldprice.web.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir proyecto del oro en nueva pestaña">
+<span class="project-number">PROYECTO 02</span>
+<img src="img/gold.webp" width="960" height="382" alt="Captura real del tablero: comparación de precios reales y predichos del oro" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</a>
+<div class="project-body">
+<p class="project-category">DATOS HISTÓRICOS · REGRESIÓN</p>
+<h3>Predicción del precio del oro</h3>
+<p>Comparar precios históricos y predicciones para interpretar el comportamiento de un modelo de regresión.</p>
+<ul class="tags" aria-label="Tecnologías">
+<li>Python</li>
+<li>Scikit-learn</li>
+<li>D3.js</li>
+</ul>
+<p class="project-outcome">↳ Tablero de valores reales frente a predichos.</p>
+<div class="project-actions">
+<a href="https://veragoldprice.web.app/" target="_blank" rel="noopener noreferrer">Ver proyecto ↗<span class="sr-only"> (nueva pestaña)</span>
+</a>
+</div>
+<details>
+<summary>Explorar el caso <span aria-hidden="true">+</span>
+</summary>
+<div class="case-content">
+<h4>Contexto y objetivo</h4>
+<p>Proyecto de aprendizaje supervisado para comparar estimaciones del precio del oro con valores históricos mediante un tablero web.</p>
+<h4>Fuente y preparación de datos</h4>
+<p>El sitio ofrece un CSV de predicciones. La documentación menciona Kaggle, LBMA, World Gold Council y FRED, pero no identifica enlaces ni versiones de los datasets. El periodo completo y las transformaciones del conjunto de entrenamiento están pendientes de confirmar.</p>
+<h4>Metodología y herramientas</h4>
+<p>La documentación describe un modelo Random Forest en Python con scikit-learn; el tablero utiliza D3.js. El sitio permite explorar años y comparar valores reales y predichos.</p>
+<h4>Resultados</h4>
+<p>El tablero original reporta <strong>R² = 0,952</strong>. Es un coeficiente de determinación, no accuracy ni una garantía del 95,2 % de aciertos. El PDF del mismo proyecto indica R² estimado ≈ 0,93. Esta discrepancia está pendiente de resolver; ninguno de los dos valores ha sido reproducido aquí.</p>
+<h4>Limitaciones</h4>
+<p>Falta documentar el corte temporal, la validación fuera de muestra y las unidades de los errores. Las predicciones son educativas; no constituyen una recomendación de inversión.</p>
+<h4>Conclusión</h4>
+<p>Comparar valores y errores permite comunicar qué explica un modelo y qué falta comprobar antes de utilizarlo.</p>
+<a class="text-link" href="https://veragoldprice.web.app/assets/documentacion_data_web_oro.pdf" target="_blank" rel="noopener noreferrer">Documentación original (PDF) ↗<span class="sr-only"> (nueva pestaña)</span>
+</a>
+</div>
+</details>
+</div>
+</article>
+<article class="project-card">
+<a class="project-image cancer-image" href="https://verapredictbreastcancer.web.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir proyecto educativo de clasificación en nueva pestaña">
+<span class="project-number">PROYECTO 03</span>
+<img src="img/cancer.webp" width="960" height="667" alt="Captura real de la web educativa de clasificación, con acceso a aplicación y documentación" loading="lazy">
+<span class="image-arrow" aria-hidden="true">↗</span>
+</a>
+<div class="project-body">
+<p class="project-category">INVESTIGACIÓN EDUCATIVA · CLASIFICACIÓN</p>
+<h3>Clasificación de cáncer de mama</h3>
+<p>Estudiar la clasificación de registros y la interpretación de variables mediante una aplicación interactiva.</p>
+<ul class="tags" aria-label="Tecnologías">
+<li>Python</li>
+<li>Scikit-learn</li>
+<li>Streamlit</li>
+<li>SHAP</li>
+</ul>
+<p class="project-outcome">↳ Demostración educativa. Sin uso diagnóstico.</p>
+<div class="project-actions">
+<a href="https://verapredictbreastcancer.web.app/" target="_blank" rel="noopener noreferrer">Ver proyecto ↗<span class="sr-only"> (nueva pestaña)</span>
+</a>
+<a href="https://github.com/VeraMxrtin/App_breast_cancer" target="_blank" rel="noopener noreferrer">GitHub ↗<span class="sr-only"> (nueva pestaña)</span>
+</a>
+</div>
+<details>
+<summary>Explorar el caso <span aria-hidden="true">+</span>
+</summary>
+<div class="case-content">
+<h4>Contexto y objetivo</h4>
+<p>Investigación educativa para explorar la clasificación de registros benignos y malignos e interpretar la contribución de sus variables.</p>
+<h4>Fuente y preparación de datos</h4>
+<p>La documentación identifica Breast Cancer Wisconsin (Diagnostic), obtenido de Kaggle, y describe revisión de nulos y duplicados, normalización y separación entrenamiento/test. Faltan el enlace y versión del dataset, la proporción de la partición y el código de entrenamiento para reproducirlo.</p>
+<h4>Metodología y herramientas</h4>
+<p>La documentación describe regresión logística, Random Forest y SVM, con evaluación mediante accuracy, F1, matriz de confusión y ROC AUC. El código de Streamlit carga un modelo Random Forest de 10 variables y visualiza su importancia con Plotly. SHAP está documentado, pero no implementado en ese archivo de la app.</p>
+<h4>Resultados y limitaciones</h4>
+<p>Se conserva la demostración pública. La app y la web muestran porcentajes distintos. Sin el experimento reproducible, el conjunto de prueba y la matriz de confusión, no se presentan como resultados validados.</p>
+<h4>Conclusión</h4>
+<p>Una clasificación exige evaluar errores por clase y documentar la validación. <strong>Este proyecto no es una herramienta de diagnóstico ni está validado para uso clínico.</strong>
+</p>
+<a class="text-link" href="https://verapredictbreastcancer.web.app/assets/Document_ML_Cancer_mama.pdf" target="_blank" rel="noopener noreferrer">Documentación original (PDF) ↗<span class="sr-only"> (nueva pestaña)</span>
+</a>
+</div>
+</details>
+</div>
+</article>
+</div>
+<p class="section-footnote">Capturas reales de las aplicaciones. Cada caso distingue la implementación, los resultados reportados y lo pendiente de validar.</p>
+<div class="initiative-heading">
+<p class="eyebrow">DESARROLLO Y EMPRENDIMIENTO</p>
+<h3>Otras formas de construir soluciones.</h3>
+<p>Iniciativas que conectan tecnología, procesos y servicios.</p>
+</div>
+<div class="initiative-grid">
+<article class="initiative-card">
+<div class="initiative-logo" data-logo="ms-wisdom-press"><img src="img/logos/ms-wisdom-press.png" alt="Logo de MS Wisdom Press" width="240" height="78" loading="lazy"></div>
+<p class="project-category">CONTENIDOS · COMERCIO ELECTRÓNICO</p>
+<h3>MS Wisdom Press</h3>
+<p>Iniciativa de contenidos digitales y comercio electrónico que complementa mi experiencia desarrollando proyectos propios.</p>
+<a class="text-link" href="https://ms-wisdom-press.vercel.app/" target="_blank" rel="noopener noreferrer">Ver proyecto ↗<span class="sr-only"> (nueva pestaña)</span></a>
+</article>
+<article class="initiative-card">
+<div class="initiative-logo" data-logo="veraflow"><img src="img/logos/veraflow.png" alt="Logo de VeraFlow" width="240" height="78" loading="lazy"></div>
+<p class="project-category">DESARROLLO · AUTOMATIZACIÓN</p>
+<h3>VeraFlow</h3>
+<p>Iniciativa de desarrollo de un CRM para gestionar comunicaciones y ventas, con flujos de automatización por WhatsApp.</p>
+<a class="text-link" href="https://veraflowapp.lovable.app/" target="_blank" rel="noopener noreferrer">Ver proyecto ↗<span class="sr-only"> (nueva pestaña)</span></a>
+</article>
+<article class="initiative-card">
+<div class="initiative-logo" data-logo="lima-kallpa"><img src="img/logos/lima-kallpa.png" alt="Logo de Lima Kallpa" width="240" height="78" loading="lazy"></div>
+<p class="project-category">SERVICIOS · CONEXIÓN CON PROVEEDORES</p>
+<h3>Lima Kallpa</h3>
+<p>Agencia que conecta a clientes que necesitan un servicio con personas y empresas que lo ofrecen, facilitando el encuentro entre necesidades y proveedores.</p>
+<a class="text-link" href="https://limakallpa-form.vercel.app/" target="_blank" rel="noopener noreferrer">Ver proyecto ↗<span class="sr-only"> (nueva pestaña)</span></a>
+</article>
+</div>
+</section>
+<section id="about" class="about-section section" aria-labelledby="about-title">
+<div class="container about-layout">
+<div>
+<p class="eyebrow">02 / SOBRE MÍ</p>
+<h2 id="about-title">Curiosidad para entender.<br>
+<span>Iniciativa para resolver.</span>
+</h2>
+<p class="about-lead">Me interesa encontrar el sentido detrás de los datos y convertirlo en algo útil.</p>
+</div>
+<div class="about-copy">
+<p>Mi formación en <strong>Administración de Sistemas para la Transformación Digital en CERTUS</strong> conecta mi interés por la tecnología con la mejora de procesos.</p>
+<p>En proyectos independientes he trabajado con SQL, tableros en Power BI y reportes en Excel con Power Query. También he llevado modelos de Python a aplicaciones web y desarrollado flujos de automatización.</p>
+<p>Aprendo construyendo, revisando resultados y resolviendo problemas paso a paso. Busco una oportunidad junior en análisis de datos donde aportar esa iniciativa y seguir desarrollándome junto a un equipo.</p>
+<a class="text-link" href="#experience">Conoce mi trayectoria →</a>
+</div>
+</div>
+</section>
+<section id="skills" class="section container" aria-labelledby="skills-title">
+<div class="section-heading">
+<div>
+<p class="eyebrow">03 / HABILIDADES</p>
+<h2 id="skills-title">Herramientas con un propósito.</h2>
+</div>
+<p>El análisis de datos como base. La programación y la automatización para llevarlo más lejos.</p>
+</div>
+<div class="skills-grid">
+<article class="skill-card">
+<span class="skill-index">01</span>
+<h3>Análisis de datos</h3>
+<p>Limpieza, transformación y exploración de datos.</p>
+<ul class="tags">
+<li>Pandas</li>
+<li>NumPy</li>
+<li>Excel</li>
+<li>Power Query</li>
+</ul>
+</article>
+<article class="skill-card">
+<span class="skill-index">02</span>
+<h3>Programación</h3>
+<p>Modelos, APIs e interfaces para consultar resultados.</p>
+<ul class="tags">
+<li>Python</li>
+<li>Flask</li>
+<li>JavaScript</li>
+</ul>
+</article>
+<article class="skill-card">
+<span class="skill-index">03</span>
+<h3>Visualización</h3>
+<p>Tableros y gráficos para comunicar información.</p>
+<ul class="tags">
+<li>Power BI</li>
+<li>Matplotlib</li>
+<li>D3.js</li>
+</ul>
+</article>
+<article class="skill-card">
+<span class="skill-index">04</span>
+<h3>Bases de datos</h3>
+<p>Consultas y transformación de datos estructurados.</p>
+<ul class="tags">
+<li>SQL</li>
+<li>MySQL</li>
+</ul>
+</article>
+<article class="skill-card">
+<span class="skill-index">05</span>
+<h3>Machine Learning</h3>
+<p>Proyectos educativos de regresión y clasificación.</p>
+<ul class="tags">
+<li>Scikit-learn</li>
+<li>SHAP</li>
+<li>Streamlit</li>
+</ul>
+</article>
+<article class="skill-card">
+<span class="skill-index">06</span>
+<h3>Automatización</h3>
+<p>Flujos de trabajo, reportes e integración de servicios.</p>
+<ul class="tags">
+<li>n8n</li>
+<li>Power Query</li>
+<li>WhatsApp Cloud API</li>
+</ul>
+</article>
+<article class="skill-card development">
+<span class="skill-index">07</span>
+<h3>Herramientas de desarrollo</h3>
+<p>Control de versiones y publicación de aplicaciones.</p>
+<ul class="tags">
+<li>Git</li>
+<li>GitHub</li>
+<li>Firebase Hosting</li>
+</ul>
+</article>
+</div>
+</section>
+<section id="experience" class="section trajectory-section" aria-labelledby="experience-title">
+<div class="container trajectory-layout">
+<div class="trajectory-intro">
+<p class="eyebrow">04 / TRAYECTORIA</p>
+<h2 id="experience-title">Iniciativa que se<br>convierte en práctica.</h2>
+<p>Proyectos independientes, desarrollo y emprendimiento. Experiencias que complementan mi enfoque en datos.</p>
+<p class="small-note">Estas iniciativas son proyectos propios; no se presentan como empleos en empresas.</p>
+</div>
+<div class="timeline">
+<article class="timeline-item">
+<div class="timeline-meta">
+<span>2026</span>
+<span>PROYECTOS INDEPENDIENTES</span>
+</div>
+<h3>Análisis de datos y reportes</h3>
+<p>Extracción y transformación de datos públicos con SQL, tableros en Power BI y reportes en Excel con Power Query. Kaggle como fuente de aprendizaje y datos.</p>
+</article>
+<article class="timeline-item">
+<div class="timeline-meta">
+<span>2026</span>
+<span>INICIATIVA DE DESARROLLO</span>
+</div>
+<h3>VeraFlow</h3>
+<p>Desarrollo de un CRM para gestionar comunicaciones y ventas, con flujos en n8n para automatizar comunicaciones por WhatsApp.</p>
+</article>
+<article class="timeline-item">
+<div class="timeline-meta">
+<span>2025–2026</span>
+<span>EMPRENDIMIENTO DIGITAL</span>
+</div>
+<h3>MS Wisdom Press</h3>
+<p>Iniciativa de contenidos digitales y comercio electrónico. Desarrollo de una tienda en Shopify e integración de herramientas de analítica y automatización, según el CV original.</p>
+</article>
+<article class="timeline-item">
+<div class="timeline-meta">
+<span>2025–2026</span>
+<span>PROYECTOS COMPLEMENTARIOS</span>
+</div>
+<h3>Desarrollo web y procesos</h3>
+<p>Diseño web para TIKKY y proyectos personales. Modelado y documentación de procesos con BPMN, Bizagi Modeler y Bonita para explorar mejoras operativas.</p>
+</article>
+</div>
+</div>
+</section>
+<section id="education" class="section container education-layout" aria-labelledby="education-title">
+<div>
+<p class="eyebrow">05 / FORMACIÓN</p>
+<h2 id="education-title">Una base en sistemas.<br>
+<span>Un enfoque en datos.</span>
+</h2>
+</div>
+<div class="education-card">
+<span class="education-mark" aria-hidden="true">C</span>
+<div>
+<p class="project-category">FORMACIÓN ACADÉMICA</p>
+<h3>Administración de Sistemas para la Transformación Digital</h3>
+<p>CERTUS · Lima, Perú</p>
+<p class="small-note">Periodo y estado académico pendientes de confirmación.</p>
+</div>
+</div>
+</section>
+<section id="contact" class="contact-section" aria-labelledby="contact-title">
+<div class="container contact-layout">
+<div>
+<p class="eyebrow">06 / SIGUIENTE PASO</p>
+<h2 id="contact-title">Los buenos proyectos<br>empiezan conversando.</h2>
+<p>Busco oportunidades junior en análisis de datos, operaciones y automatización en Lima, Perú.</p>
+<a class="button primary" href="mailto:vera124486@gmail.com">Escríbeme ↗</a>
+<a class="contact-email" href="mailto:vera124486@gmail.com">vera124486@gmail.com</a>
+</div>
+<div class="contact-links">
+<p>LIMA, PERÚ <span aria-hidden="true">↗</span>
+</p>
+<a href="https://www.linkedin.com/in/vera-martin-40375b328/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span>
+<span class="sr-only"> (nueva pestaña)</span>
+</a>
+<a href="https://github.com/VeraMxrtin" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span>
+<span class="sr-only"> (nueva pestaña)</span>
+</a>
+<a href="https://wa.me/51947082837" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span>
+<span class="sr-only"> (nueva pestaña)</span>
+</a>
+<a href="img/cv_veramartin.pdf" target="_blank" rel="noopener noreferrer">Ver CV <span aria-hidden="true">↗</span><span class="sr-only"> (nueva pestaña)</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="container footer">
+<a class="brand" href="#inicio">
+<span class="monogram">vm<span>.</span>
+</span>
+<span>Vera Martín</span>
+</a>
+<p>© 2026 · Hecho con criterio y curiosidad.</p>
+<a href="#inicio">Volver arriba ↑</a>
+</footer>
 </body>
 </html>

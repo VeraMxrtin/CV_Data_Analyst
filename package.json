@@ -1,0 +1,10 @@
+{
+  "name": "vera-martin-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/site.test.mjs",
+    "dev": "python -m http.server 4173 --bind 127.0.0.1 --directory dist"
+  }
+}

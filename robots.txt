@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cvveramartin.web.app/sitemap.xml

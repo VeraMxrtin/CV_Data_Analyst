@@ -15,6 +15,11 @@ node_modules/
 
 # Build output
 dist/
+.venv/
+.audit/
+.tools/
+artifacts/
+__pycache__/
 
 
 # Logs
