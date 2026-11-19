@@ -12,9 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm ci && npm run build
+      - run: test -f firebase.json && test -f dist/index.html
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entryPoint: .
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CVDATAANALYST_BC66B }}
           channelId: live
           projectId: cvdataanalyst-bc66b
+          target: portfolio

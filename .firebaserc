@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "cvdataanalyst-bc66b"
+  },
+  "targets": {
+    "cvdataanalyst-bc66b": {
+      "hosting": {
+        "portfolio": ["cvveramartin"]
+      }
+    }
+  }
+}

@@ -1,7 +1,5 @@
 # Configuración de Firebase
 .firebase/
-.firebaserc
-firebase.json
 404.html
 # Configuración de GitHub Actions
 .github/
