@@ -6,18 +6,45 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: firebase-hosting-live
+  cancel-in-progress: false
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci && npm run build
-      - run: test -f firebase.json && test -f dist/index.html
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - name: Validate deployment files and credentials
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CVDATAANALYST_BC66B }}
+        run: |
+          test -n "$FIREBASE_SERVICE_ACCOUNT" || { echo 'Missing Firebase service account secret'; exit 1; }
+          test -f firebase.json && test -f .firebaserc && test -f dist/index.html
+          cmp img/cv_veramartin.pdf dist/img/cv_veramartin.pdf
+          node -e "const d=require('./dist/deployment.json'); if(d.commit!==process.env.GITHUB_SHA || d.runId!==process.env.GITHUB_RUN_ID) process.exit(1)"
+      - name: Deploy to Firebase Hosting live
+        id: deploy
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           entryPoint: .
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CVDATAANALYST_BC66B }}
           channelId: live
           projectId: cvdataanalyst-bc66b
           target: portfolio
+      - name: Verify published commit on the portfolio site
+        run: |
+          curl --fail --silent --show-error --location --retry 6 --retry-all-errors --retry-delay 5 \
+            "https://cvveramartin.web.app/deployment.json?run=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --output deployed.json
+          node -e "const d=require('./deployed.json'); if(d.commit!==process.env.GITHUB_SHA || d.runId!==process.env.GITHUB_RUN_ID || d.runAttempt!==process.env.GITHUB_RUN_ATTEMPT) { console.error('The live site does not serve this workflow run'); process.exit(1) }"
+          echo "Published ${GITHUB_SHA} at https://cvveramartin.web.app/"

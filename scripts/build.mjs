@@ -1,8 +1,8 @@
-import { mkdir, copyFile, readdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, copyFile, readdir, readFile, writeFile, rm } from 'node:fs/promises';
 await mkdir('dist', { recursive: true });
 for (const file of ['index.html','index.css','index.js','favicon.svg','robots.txt','sitemap.xml']) await copyFile(file, `dist/${file}`);
 await mkdir('dist/img', { recursive: true });
-for (const file of ['portrait.webp','spotify.webp','gold.webp','cancer.webp','social.jpg','cv_veramartin.pdf','cv_veramartin.pdf']) await copyFile(`img/${file}`, `dist/img/${file}`);
+for (const file of ['portrait.webp','spotify.webp','gold.webp','cancer.webp','social.jpg','cv_veramartin.pdf']) await copyFile(`img/${file}`, `dist/img/${file}`);
 // Los logos son opcionales: no se solicitan recursos que todavía no existen.
 const logoFiles = await readdir('img/logos');
 let html = await readFile('index.html', 'utf8');
@@ -17,4 +17,13 @@ for (const [slug, name] of [['ms-wisdom-press', 'MS Wisdom Press'], ['veraflow',
   );
 }
 await writeFile('dist/index.html', html);
+if (process.env.GITHUB_SHA && process.env.GITHUB_RUN_ID) {
+  await writeFile('dist/deployment.json', JSON.stringify({
+    commit: process.env.GITHUB_SHA,
+    runId: process.env.GITHUB_RUN_ID,
+    runAttempt: process.env.GITHUB_RUN_ATTEMPT
+  }));
+} else {
+  await rm('dist/deployment.json', { force: true });
+}
 console.log('Producción lista en dist/ (sin dependencias de ejecución).');
