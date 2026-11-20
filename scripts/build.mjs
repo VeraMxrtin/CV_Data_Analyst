@@ -1,8 +1,9 @@
 import { mkdir, copyFile, readdir, readFile, writeFile, rm } from 'node:fs/promises';
+await rm('dist', { recursive: true, force: true });
 await mkdir('dist', { recursive: true });
 for (const file of ['index.html','index.css','index.js','favicon.svg','robots.txt','sitemap.xml']) await copyFile(file, `dist/${file}`);
 await mkdir('dist/img', { recursive: true });
-for (const file of ['portrait.webp','spotify.webp','gold.webp','cancer.webp','social.jpg','cv_veramartin.pdf']) await copyFile(`img/${file}`, `dist/img/${file}`);
+for (const file of ['portrait.webp','spotify.webp','gold.webp','cancer.webp','social.png','cv_veramartin.pdf']) await copyFile(`img/${file}`, `dist/img/${file}`);
 // Los logos son opcionales: no se solicitan recursos que todavía no existen.
 const logoFiles = await readdir('img/logos');
 let html = await readFile('index.html', 'utf8');
